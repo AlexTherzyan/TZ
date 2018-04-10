@@ -1,0 +1,20 @@
+{
+  "autoload": {
+    "psr-4": {
+      "test1\\": "vendor/test1",
+      "public\\": "public"
+    }
+  },
+
+    "require": {
+      "twbs/bootstrap": "4.0.0",
+      "php-imap/php-imap": "^3.0",
+      "components/jquery": "^3.3",
+      "swiftmailer/swiftmailer": "^6.0",
+      "gabordemooij/redbean": "dev-master"
+    }
+
+
+
+
+}
