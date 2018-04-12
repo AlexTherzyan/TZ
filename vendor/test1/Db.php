@@ -23,6 +23,14 @@ class Db{
         //подключаемся к бд
         \R::setup($db['dsn'],$db['user'],$db['password']);
 
+        //проверяем существует ли таблица
+        if (!(\R::find('template'))){
+            $asd = \R::dispense('template');
+            $asd->template_name = 'Hello!';
+            $asd->msg_title = 'Hello world';
+            $asd->msg_text = 'Hello world!';
+            \R::store($asd);
+        }
         //проверяем на соединение с бд
 //        if (!\R::testConnection()){
 //            throw new \Couchbase\Exception("Нет соединения с бд",500);
