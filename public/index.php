@@ -29,6 +29,9 @@ $mail = new test1\ImapMail();
 
 ?>
 
+<div>
+    <label>Пользователь: <?=$mail->getEmail(); ?></label>
+</div>
 
 
 <div class="row my">
@@ -152,6 +155,22 @@ $mail = new test1\ImapMail();
             </div>
 
             <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+
+                <form method="post" id="ajaxform1" >
+
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Email</label>
+                        <input name="temp_name" type="text" class="form-control" id="exampleFormControlInput1"  >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Пароль</label>
+                        <input name="temp_theme" type="text" class="form-control" id="exampleFormControlInput1">
+                    </div>
+
+                    <button  type="submit" name="button" class="btn btn-primary">Войти</button>
+
+                </form>
 
             </div>
 

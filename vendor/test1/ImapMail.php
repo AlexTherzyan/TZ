@@ -22,8 +22,8 @@ use Swift_SmtpTransport;
 class ImapMail
 {
 
-    private $email = "";    //-- здесь вводите почту с которой будете работать
-    private $password = ""; //-- пароль
+    private $email = "buyka@tut.by";    //-- здесь вводите почту с которой будете работать
+    private $password = "shadow226388"; //-- пароль
 
 
     public function __construct()
@@ -36,6 +36,14 @@ class ImapMail
         $imap = imap_open($hostname, $this->email, $this->password) or die('Cannot connect to Yandex: ' . imap_last_error());
 
         return $imap;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
     }
 
     public function getNumMessages($imap)
